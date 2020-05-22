@@ -1,4 +1,4 @@
-Project for virtual glass door exhibit.
+Project for virtual glass room exhibit.
 
 ## Available Scripts
 
