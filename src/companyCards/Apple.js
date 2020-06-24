@@ -10,7 +10,7 @@ export default ({ cardContent }) => {
       contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
       date="2011 - present"
       iconStyle={{
-        background: '#E8E8E8',
+        background: '#f3f3f3',
         color: 'black',
         borderStyle: 'solid',
         borderColor: 'black',
