@@ -5,11 +5,19 @@ import {
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import AmazonCard from './companyCards/Amazon';
+import FacebookCard from './companyCards/Facebook'
+import GoogleCard from './companyCards/Google'
+import NetflixCard from './companyCards/Netflix'
+import AppleCard from './companyCards/Apple'
 
 export default () => {
   return (
     <VerticalTimeline>
       <AmazonCard cardContent={''} />
+      <FacebookCard />
+      <GoogleCard />
+      <NetflixCard />
+      <AppleCard />
 
       {/* <VerticalTimelineElement
     className="vertical-timeline-element--work"
