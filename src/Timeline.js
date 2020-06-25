@@ -1,100 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import AmazonCard from './companyCards/Amazon';
-import FacebookCard from './companyCards/Facebook'
-import GoogleCard from './companyCards/Google'
-import NetflixCard from './companyCards/Netflix'
-import AppleCard from './companyCards/Apple'
+import FacebookCard from './companyCards/Facebook';
+import GoogleCard from './companyCards/Google';
+import NetflixCard from './companyCards/Netflix';
+import AppleCard from './companyCards/Apple';
+import protestData from './protestData';
+import Modal from './Modal';
 
 export default () => {
-  return (
-    <VerticalTimeline style={{backgroundColor:'red'}}>
-      <AmazonCard cardContent={''} />
-      <FacebookCard />
-      <GoogleCard />
-      <NetflixCard />
-      <AppleCard />
+  const [cardId, setCardId] = useState(0);
+  const [modalShow, setModalShow] = useState(false);
 
-      {/* <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    date="2010 - 2011"
-    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-    icon={<img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />}
-  >
-    <h3 className="vertical-timeline-element-title">Art Director</h3>
-    <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-    <p>
-      Creative Direction, User Experience, Visual Design, SEO, Online Marketing
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    date="2008 - 2010"
-    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-    icon={<img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />}
-  >
-    <h3 className="vertical-timeline-element-title">Web Designer</h3>
-    <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
-    <p>
-      User Experience, Visual Design
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--work"
-    date="2006 - 2008"
-    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-    icon={<img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />}
-  >
-    <h3 className="vertical-timeline-element-title">Web Designer</h3>
-    <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
-    <p>
-      User Experience, Visual Design
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--education"
-    date="April 2013"
-    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-    icon={<img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />}
-  >
-    <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
-    <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
-    <p>
-      Strategy, Social Media
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--education"
-    date="November 2012"
-    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-    icon={<img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />}
-  >
-    <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
-    <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-    <p>
-      Creative Direction, User Experience, Visual Design
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    className="vertical-timeline-element--education"
-    date="2002 - 2006"
-    iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-    icon={<img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />}
-  >
-    <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
-    <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
-    <p>
-      Creative Direction, Visual Design
-    </p>
-  </VerticalTimelineElement>
-  <VerticalTimelineElement
-    iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-    icon={<img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" />}
-  /> */}
-    </VerticalTimeline>
+  return (
+    <div>
+      <VerticalTimeline style={{ backgroundColor: 'red' }}>
+        <FacebookCard
+          cardContent={protestData[0]}
+          id={0}
+          setModalShow={setModalShow}
+          setCardId={setCardId}
+        />
+        <AppleCard
+          cardContent={protestData[1]}
+          id={1}
+          setModalShow={setModalShow}
+          setCardId={setCardId}
+        />
+        <NetflixCard
+          cardContent={protestData[2]}
+          id={2}
+          setModalShow={setModalShow}
+          setCardId={setCardId}
+        />
+        <GoogleCard
+          cardContent={protestData[3]}
+          id={3}
+          setModalShow={setModalShow}
+          setCardId={setCardId}
+        />
+        <AmazonCard
+          cardContent={protestData[4]}
+          id={4}
+          setModalShow={setModalShow}
+          setCardId={setCardId}
+        />
+      </VerticalTimeline>
+      <Modal
+        show={modalShow}
+        content={protestData[cardId]}
+        onHide={() => setModalShow(false)}
+      />
+    </div>
   );
 };
