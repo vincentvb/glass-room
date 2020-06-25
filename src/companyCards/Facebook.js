@@ -21,10 +21,10 @@ export default ({ cardContent, id, setModalShow, setCardId }) => {
       icon={
         <FaFacebook
           style={{
-            height: '47px',
-            width: '47px',
-            left: '28%',
-            top: '29%',
+            height: '51px',
+            width: '48px',
+            left: '27%',
+            top: '25%',
             color: cardContent.companyColor,
           }}
         />
