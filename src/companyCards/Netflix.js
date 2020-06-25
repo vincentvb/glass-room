@@ -22,7 +22,7 @@ export default ({ cardContent, id, setModalShow, setCardId }) => {
         <img
           src={netflixIcon}
           alt=""
-          style={{ height: '42px', width: '48px', marginTop: '5px' }}
+          style={{ height: '42px', width: '51px', marginTop: '5px' }}
         />
       }
       onTimelineElementClick={() => {

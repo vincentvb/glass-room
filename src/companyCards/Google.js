@@ -23,7 +23,7 @@ export default ({ cardContent, id, setModalShow, setCardId }) => {
         <img
           src={googleIcon}
           alt=""
-          style={{ height: '52px', width: '52px', left: '28%', top: '27%' }}
+          style={{ height: '52px', width: '55px', left: '28%', top: '27%' }}
         />
       }
       onTimelineElementClick={() => {

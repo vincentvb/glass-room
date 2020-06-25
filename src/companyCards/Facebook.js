@@ -23,8 +23,8 @@ export default ({ cardContent, id, setModalShow, setCardId }) => {
           style={{
             height: '47px',
             width: '47px',
-            left: '29%',
-            top: '27%',
+            left: '28%',
+            top: '29%',
             color: cardContent.companyColor,
           }}
         />
