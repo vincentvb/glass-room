@@ -12,7 +12,6 @@ export default ({ cardContent, id, setModalShow, setCardId }) => {
         textAlign: 'center',
       }}
       contentArrowStyle={{ borderRight: '7px solid  #f3f3f3' }}
-      date="2011 - present"
       iconStyle={{
         background: '#f3f3f3',
         color: 'black',
