@@ -12,7 +12,7 @@ import AppleCard from './companyCards/Apple'
 
 export default () => {
   return (
-    <VerticalTimeline>
+    <VerticalTimeline style={{backgroundColor:'red'}}>
       <AmazonCard cardContent={''} />
       <FacebookCard />
       <GoogleCard />
