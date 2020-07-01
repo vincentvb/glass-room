@@ -1,14 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import Timeline from './Timeline';
 import * as serviceWorker from './serviceWorker';
+import HomePage from './HomePage';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
 
 ReactDOM.render(
-  // <React.StrictMode>
-  <Timeline />,
-  // </React.StrictMode>,
+  <React.StrictMode>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/timeline" exact component={Timeline} />
+      </Switch>
+    </Router>,
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
