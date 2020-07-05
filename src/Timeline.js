@@ -12,40 +12,29 @@ import Modal from './Modal';
 export default () => {
   const [cardId, setCardId] = useState(0);
   const [modalShow, setModalShow] = useState(false);
+  const components = {
+    Facebook: FacebookCard,
+    Apple: AppleCard,
+    Amazon: AmazonCard,
+    Google: GoogleCard,
+    Netflix: NetflixCard,
+  };
 
+  const displayCompanyCards = protestData.map((card, index) => {
+    const CardType = components[card.companyName];
+    return (
+      <CardType
+        cardContent={card}
+        id={index}
+        setModalShow={setModalShow}
+        setCardId={setCardId}
+      />
+    );
+  });
   return (
     <div>
       <VerticalTimeline style={{ backgroundColor: 'red' }}>
-        <FacebookCard
-          cardContent={protestData[0]}
-          id={0}
-          setModalShow={setModalShow}
-          setCardId={setCardId}
-        />
-        <AppleCard
-          cardContent={protestData[1]}
-          id={1}
-          setModalShow={setModalShow}
-          setCardId={setCardId}
-        />
-        <NetflixCard
-          cardContent={protestData[2]}
-          id={2}
-          setModalShow={setModalShow}
-          setCardId={setCardId}
-        />
-        <GoogleCard
-          cardContent={protestData[3]}
-          id={3}
-          setModalShow={setModalShow}
-          setCardId={setCardId}
-        />
-        <AmazonCard
-          cardContent={protestData[4]}
-          id={4}
-          setModalShow={setModalShow}
-          setCardId={setCardId}
-        />
+        {displayCompanyCards}
       </VerticalTimeline>
       <Modal
         show={modalShow}
