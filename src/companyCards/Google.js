@@ -1,6 +1,6 @@
 import React from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import googleIcon from '@iconify/icons-flat-color-icons/google';
 
 export default ({ cardContent, id, setModalShow, setCardId }) => {

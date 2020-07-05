@@ -1,6 +1,6 @@
 import React from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import netflixIcon from '@iconify/icons-mdi/netflix';
 
 export default ({ cardContent, id, setModalShow, setCardId }) => {
