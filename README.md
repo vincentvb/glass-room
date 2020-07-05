@@ -32,3 +32,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 Serves up a client build via a node.js application. <br />
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Company Icons from: https://iconify.design/icon-sets/

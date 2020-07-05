@@ -1,6 +1,7 @@
 import React from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
-import googleIcon from '../companyIcons/googleicon.png';
+import { Icon, InlineIcon } from '@iconify/react';
+import googleIcon from '@iconify/icons-flat-color-icons/google';
 
 export default ({ cardContent, id, setModalShow, setCardId }) => {
   return (
@@ -18,13 +19,7 @@ export default ({ cardContent, id, setModalShow, setCardId }) => {
         borderStyle: 'solid',
         borderColor: '#34A854',
       }}
-      icon={
-        <img
-          src={googleIcon}
-          alt=""
-          style={{ height: '52px', width: '55px', left: '28%', top: '27%' }}
-        />
-      }
+      icon={<Icon icon={googleIcon} />}
       onTimelineElementClick={() => {
         setModalShow(true);
         setCardId(id);

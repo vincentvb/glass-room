@@ -1,6 +1,7 @@
 import React from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
-import netflixIcon from '../companyIcons/netflixicon.png';
+import { Icon, InlineIcon } from '@iconify/react';
+import netflixIcon from '@iconify/icons-mdi/netflix';
 
 export default ({ cardContent, id, setModalShow, setCardId }) => {
   return (
@@ -18,13 +19,7 @@ export default ({ cardContent, id, setModalShow, setCardId }) => {
         borderStyle: 'solid',
         borderColor: '#F44335',
       }}
-      icon={
-        <img
-          src={netflixIcon}
-          alt=""
-          style={{ height: '42px', width: '51px', marginTop: '5px' }}
-        />
-      }
+      icon={<Icon icon={netflixIcon} color="red" />}
       onTimelineElementClick={() => {
         setModalShow(true);
         setCardId(id);

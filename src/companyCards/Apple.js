@@ -20,7 +20,7 @@ export default ({ cardContent, id, setModalShow, setCardId }) => {
       }}
       icon={
         <FaApple
-          style={{ height: '47px', width: '47px', left: '28%', top: '26%' }}
+        // style={{ height: '47px', width: '47px', left: '28%', top: '26%' }}
         />
       }
       onTimelineElementClick={() => {
