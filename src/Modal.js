@@ -3,9 +3,9 @@ import { Modal } from 'react-bootstrap';
 
 export default (props) => {
   const { content } = props;
-  const listOfSources = content.source.map((resource) => {
+  const listOfSources = content.source.map((resource, index) => {
     return (
-      <li>
+      <li key={index}>
         <a href={resource}>{resource}</a>
       </li>
     );
@@ -21,9 +21,6 @@ export default (props) => {
         closeButton
         style={{ backgroundColor: content.companyColor, color: 'white' }}
       >
-        {/* <Modal.Title id="contained-modal-title-vcenter">
-          {content.companyName}
-        </Modal.Title> */}
         <div>
           <h1>{content.companyName}</h1>
           <h4>{content.theme}</h4>
