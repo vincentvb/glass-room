@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import onClickOutside from 'react-onclickoutside';
 import { FaCheckCircle } from 'react-icons/fa';
 
 function Dropdown({ title, items, multiSelect = false, state, setFunction }) {
@@ -21,7 +20,6 @@ function Dropdown({ title, items, multiSelect = false, state, setFunction }) {
       selectionAfterRemoval = selectionAfterRemoval.filter(
         (current) => current !== item
       );
-      console.log(state);
       setFunction(state.filter((company) => company !== e.target.name));
       setSelection([...selectionAfterRemoval]);
     }
@@ -72,9 +70,5 @@ function Dropdown({ title, items, multiSelect = false, state, setFunction }) {
     </div>
   );
 }
-
-const clickOutsideConfig = {
-  handleClickOutside: () => Dropdown.handleClickOutside,
-};
 
 export default Dropdown;
