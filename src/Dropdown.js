@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
+import { BsFillCaretDownFill, BsFillCaretUpFill } from 'react-icons/bs';
 
 function Dropdown({ title, items, multiSelect = false, state, setFunction }) {
   const [open, setOpen] = useState(false);
@@ -46,7 +47,7 @@ function Dropdown({ title, items, multiSelect = false, state, setFunction }) {
           <p className="dd-header__title--bold">{title}</p>
         </div>
         <div className="dd-header__action">
-          <p>{open ? 'Close' : 'Open'}</p>
+          <p>{open ? <BsFillCaretUpFill /> : <BsFillCaretDownFill />}</p>
         </div>
       </div>
       {open && (
