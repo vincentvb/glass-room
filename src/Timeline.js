@@ -72,7 +72,7 @@ export default () => {
             multiSelect
             state={validProtests}
             setFunction={setValidProtests}
-          />
+          /> 
           <Dropdown
             title="Companies"
             items={allCompanies}

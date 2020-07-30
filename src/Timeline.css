@@ -11,3 +11,13 @@
     width: 80%;
     margin-left: 20%;
 }
+
+@media only screen and (max-width: 1170px) {
+    .filterDiv {
+        display: none;
+    }
+    .timelineModalDiv{
+        margin-left: auto;
+        width: 100%;
+    }
+}
