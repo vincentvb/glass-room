@@ -9,6 +9,9 @@ import AppleCard from './companyCards/Apple';
 import protestData from './protestData';
 import Modal from './Modal';
 import Dropdown from './Dropdown';
+import SlidingPane from "react-sliding-pane";
+import {GrFilter} from 'react-icons/gr'
+import "react-sliding-pane/dist/react-sliding-pane.css";
 import './Dropdown.scss';
 import './Timeline.css'
 
@@ -23,6 +26,10 @@ export default () => {
   const [validYears, setValidYears] = useState(allYears);
   const [validCountries, setValidCountries] = useState(allCountries);
   const [validProtests, setValidProtests] = useState(allProtests);
+  const [state, setState] = useState({
+    isPaneOpen: false,
+    isPaneOpenLeft: false,
+  });
   const components = {
     Facebook: FacebookCard,
     Apple: AppleCard,
@@ -103,6 +110,48 @@ export default () => {
             onHide={() => setModalShow(false)}
           />
         </div>
+        <div>
+      <div className="optionsButton">
+        <button className="btn btn-danger btn-circle btn-md" onClick={() => setState({ isPaneOpenLeft: true })}>
+          <GrFilter style={{fontSize:'27px'}}/>
+        </button>
+      </div>
+      <SlidingPane
+        isOpen={state.isPaneOpenLeft}
+        from="left"
+        width="50%"
+        onRequestClose={() => setState({ isPaneOpenLeft: false })}
+      >
+        <Dropdown
+            title="Protests"
+            items={allProtests}
+            multiSelect
+            state={validProtests}
+            setFunction={setValidProtests}
+          /> 
+          <Dropdown
+            title="Companies"
+            items={allCompanies}
+            multiSelect
+            state={validCompanies}
+            setFunction={setValidCompanies}
+          />
+          <Dropdown
+            title="Years"
+            items={allYears}
+            multiSelect
+            state={validYears}
+            setFunction={setValidYears}
+          />
+          <Dropdown
+            title="Countries"
+            items={allCountries}
+            multiSelect
+            state={validCountries}
+            setFunction={setValidCountries}
+          />
+      </SlidingPane>
+    </div>
       </div>
   );
 };
