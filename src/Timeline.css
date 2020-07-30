@@ -1,0 +1,13 @@
+.timelineMainDiv{
+    display: flex;
+}
+
+.filterDiv{
+    width: 20%;
+    position: fixed;
+}
+
+.timelineModalDiv{
+    width: 80%;
+    margin-left: 20%;
+}

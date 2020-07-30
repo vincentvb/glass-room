@@ -10,6 +10,7 @@ import protestData from './protestData';
 import Modal from './Modal';
 import Dropdown from './Dropdown';
 import './Dropdown.scss';
+import './Timeline.css'
 
 export default () => {
   const allCompanies = ['Facebook', 'Google', 'Amazon', 'Apple', 'Netflix'];
@@ -63,43 +64,45 @@ export default () => {
   });
 
   return (
-    <div>
-      <div>
-        <Dropdown
-          title="Protests"
-          items={allProtests}
-          multiSelect
-          state={validProtests}
-          setFunction={setValidProtests}
-        />
-        <Dropdown
-          title="Companies"
-          items={allCompanies}
-          multiSelect
-          state={validCompanies}
-          setFunction={setValidCompanies}
-        />
-        <Dropdown
-          title="Years"
-          items={allYears}
-          multiSelect
-          state={validYears}
-          setFunction={setValidYears}
-        />
-        <Dropdown
-          title="Countries"
-          items={allCountries}
-          multiSelect
-          state={validCountries}
-          setFunction={setValidCountries}
-        />
+      <div className="timelineMainDiv">
+        <div className="filterDiv" >
+          <Dropdown
+            title="Protests"
+            items={allProtests}
+            multiSelect
+            state={validProtests}
+            setFunction={setValidProtests}
+          />
+          <Dropdown
+            title="Companies"
+            items={allCompanies}
+            multiSelect
+            state={validCompanies}
+            setFunction={setValidCompanies}
+          />
+          <Dropdown
+            title="Years"
+            items={allYears}
+            multiSelect
+            state={validYears}
+            setFunction={setValidYears}
+          />
+          <Dropdown
+            title="Countries"
+            items={allCountries}
+            multiSelect
+            state={validCountries}
+            setFunction={setValidCountries}
+          />
+        </div>
+        <div className="timelineModalDiv">
+          <VerticalTimeline>{displayCompanyCards}</VerticalTimeline>
+          <Modal
+            show={modalShow}
+            content={protestData[cardId]}
+            onHide={() => setModalShow(false)}
+          />
+        </div>
       </div>
-      <VerticalTimeline>{displayCompanyCards}</VerticalTimeline>
-      <Modal
-        show={modalShow}
-        content={protestData[cardId]}
-        onHide={() => setModalShow(false)}
-      />
-    </div>
   );
 };
