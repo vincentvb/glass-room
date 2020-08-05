@@ -22,8 +22,8 @@ export default (props) => {
         style={{ backgroundColor: content.protestColor, color: 'white' }}
       >
         <div>
-          <h1>{content.companyName}</h1>
-          <h4>{content.theme}</h4>
+          <h2>{content.companyName}</h2>
+          <h1>{content.theme}</h1>
           <h4>{content.numberOfPeople + ' ' + content.actionDoneBy}</h4>
           <h4>{content.date}</h4>
           <h4>{content.location}</h4>

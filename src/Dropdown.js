@@ -9,10 +9,12 @@ function Dropdown({ title, items, multiSelect = false, state, setFunction }) {
   Dropdown.handleClickOutside = () => setOpen(false);
 
   async function handleOnClick(e, item) {
+    console.log('here', e.target.name, item)
     if (!selection.some((current) => current === item)) {
       if (!multiSelect) {
         setSelection([item]);
       } else if (multiSelect) {
+        console.log('here2', e.target.name, item)
         await setFunction([...state, e.target.name]);
         setSelection([...selection, item]);
       }
@@ -21,6 +23,7 @@ function Dropdown({ title, items, multiSelect = false, state, setFunction }) {
       selectionAfterRemoval = selectionAfterRemoval.filter(
         (current) => current !== item
       );
+      console.log('here3', e.target.name, item)
       await setFunction(state.filter((company) => company !== e.target.name));
       setSelection([...selectionAfterRemoval]);
     }
