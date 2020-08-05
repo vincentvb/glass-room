@@ -112,7 +112,7 @@ export default () => {
         </div>
         <div>
       <div className="optionsButton">
-        <button className="btn btn-circle btn-md shadow" onClick={() => setState({ isPaneOpenLeft: true })}>
+        <button className="btn btn-circle btn-md " onClick={() => setState({ isPaneOpenLeft: true })}>
           <IoMdSwitch style={{fontSize:'27px'}}/>
         </button>
       </div>
