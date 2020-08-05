@@ -5,7 +5,7 @@ import { FaApple } from 'react-icons/fa';
 export default ({ cardContent, id, setModalShow, setCardId }) => {
   return (
     <VerticalTimelineElement
-      ssName="vertical-timeline-element--work"
+      className="vertical-timeline-element--work"
       contentStyle={{
         background: '#f3f3f3',
         color: 'black',
