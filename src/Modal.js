@@ -19,7 +19,7 @@ export default (props) => {
     >
       <Modal.Header
         closeButton
-        style={{ backgroundColor: content.companyColor, color: 'white' }}
+        style={{ backgroundColor: content.protestColor, color: 'white' }}
       >
         <div>
           <h1>{content.companyName}</h1>

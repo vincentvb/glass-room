@@ -17,7 +17,7 @@ export default ({ cardContent, id, setModalShow, setCardId }) => {
         background: '#f3f3f3',
         color: 'black',
         borderStyle: 'solid',
-        borderColor: '#F44335',
+        borderColor: cardContent.protestColor,
       }}
       icon={<Icon icon={netflixIcon} color="red" />}
       onTimelineElementClick={() => {

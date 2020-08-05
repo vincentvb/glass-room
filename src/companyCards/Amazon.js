@@ -16,7 +16,7 @@ export default ({ cardContent, id, setModalShow, setCardId }) => {
         background: '#f3f3f3',
         color: 'black',
         borderStyle: 'solid',
-        borderColor: '#FFB550',
+        borderColor: cardContent.protestColor,
       }}
       icon={<FaAmazon />}
       onTimelineElementClick={() => {

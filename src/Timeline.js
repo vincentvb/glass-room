@@ -10,7 +10,7 @@ import protestData from './protestData';
 import Modal from './Modal';
 import Dropdown from './Dropdown';
 import SlidingPane from "react-sliding-pane";
-import {GrFilter} from 'react-icons/gr'
+import {IoMdSwitch} from 'react-icons/io'
 import "react-sliding-pane/dist/react-sliding-pane.css";
 import './Dropdown.scss';
 import './Timeline.css'
@@ -112,8 +112,8 @@ export default () => {
         </div>
         <div>
       <div className="optionsButton">
-        <button className="btn btn-danger btn-circle btn-md" onClick={() => setState({ isPaneOpenLeft: true })}>
-          <GrFilter style={{fontSize:'27px'}}/>
+        <button className="btn btn-circle btn-md shadow" onClick={() => setState({ isPaneOpenLeft: true })}>
+          <IoMdSwitch style={{fontSize:'27px'}}/>
         </button>
       </div>
       <SlidingPane

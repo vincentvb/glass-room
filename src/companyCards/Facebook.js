@@ -17,12 +17,12 @@ export default ({ cardContent, id, setModalShow, setCardId }) => {
           background: '#f3f3f3',
           color: 'black',
           borderStyle: 'solid',
-          borderColor: cardContent.companyColor,
+          borderColor: cardContent.protestColor,
         }}
         icon={
           <FaFacebook
             style={{
-              color: cardContent.companyColor,
+              color: "#1877F2",
             }}
           />
         }

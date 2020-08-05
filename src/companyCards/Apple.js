@@ -16,12 +16,10 @@ export default ({ cardContent, id, setModalShow, setCardId }) => {
         background: '#f3f3f3',
         color: 'black',
         borderStyle: 'solid',
-        borderColor: 'black',
+        borderColor: cardContent.protestColor,
       }}
       icon={
-        <FaApple
-        // style={{ height: '47px', width: '47px', left: '28%', top: '26%' }}
-        />
+        <FaApple/>
       }
       onTimelineElementClick={() => {
         setModalShow(true);
