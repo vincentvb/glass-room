@@ -6,20 +6,99 @@ import FacebookCard from './companyCards/Facebook';
 import GoogleCard from './companyCards/Google';
 import NetflixCard from './companyCards/Netflix';
 import AppleCard from './companyCards/Apple';
+import AdobeCard from './companyCards/Adobe';
+import CiscoCard from './companyCards/Cisco';
+import HPCard from './companyCards/HP';
+import IBMCard from './companyCards/IBM';
+import IntelCard from './companyCards/Intel';
+import MicrosoftCard from './companyCards/Microsoft';
+import OracleCard from './companyCards/Oracle';
+import PalantirCard from './companyCards/Palantir';
+import PaypalCard from './companyCards/Paypal';
+import SalesforceCard from './companyCards/Salesforce';
+import SpotifyCard from './companyCards/Spotify';
+import TwitterCard from './companyCards/Twitter';
+import UberCard from './companyCards/Uber';
+import YahooCard from './companyCards/Yahoo';
 import protestData from './protestData';
 import Modal from './Modal';
 import Dropdown from './Dropdown';
-import SlidingPane from "react-sliding-pane";
-import {IoMdSwitch} from 'react-icons/io'
-import "react-sliding-pane/dist/react-sliding-pane.css";
+import SlidingPane from 'react-sliding-pane';
+import { IoMdSwitch } from 'react-icons/io';
+import 'react-sliding-pane/dist/react-sliding-pane.css';
 import './Dropdown.scss';
-import './Timeline.css'
+import './Timeline.css';
 
 export default () => {
-  const allCompanies = ['Facebook', 'Google', 'Amazon', 'Apple', 'Netflix'];
-  const allYears = ['2009', '2011', '2016', '2018'];
-  const allCountries = ['Internet', 'France', 'Germany'];
-  const allProtests = ['Consumer Outrage', 'Ethics', 'Labor/Wage'];
+  const allCompanies = [
+    'Facebook',
+    'Google',
+    'Amazon',
+    'Apple',
+    'Netflix',
+    'Uber',
+    'HP',
+    'Palantir',
+    'Twitter',
+    'Oracle',
+    'Paypal',
+    'Microsoft',
+    'Salesforce',
+    'Adobe',
+    'IBM',
+    'Intel',
+    'Spotify',
+    'Cisco',
+  ];
+  const allYears = [
+    '2009',
+    '2010',
+    '2011',
+    '2012',
+    '2016',
+    '2018',
+    '2019',
+    '2017',
+    '2015',
+    '2014',
+    '2013',
+    'Ongoing',
+  ];
+  const allCountries = [
+    'Internet',
+    'France',
+    'Germany',
+    'USA',
+    'China',
+    'Worldwide',
+    'Afghanistan',
+    'UK',
+    'Belgium',
+    'France',
+    'Qatar',
+    'Palestine',
+    'India',
+    'Ghana',
+    'Israel',
+  ];
+  const allProtests = [
+    'Consumer Outrage',
+    'Ethics',
+    'Labor/Wage',
+    'Tax Evasion',
+    'Discrimination',
+    'Class Action Lawsuit',
+    'Sexual Harassment',
+    'Forced Arbitration',
+    'Company Policy',
+    'Sexual Harassment',
+    'Job Security',
+    'Tech Presence',
+    'Public Resignation',
+    'Foreign Working Conditions',
+    'Environmental Cause',
+    'Other',
+  ];
   const [cardId, setCardId] = useState(0);
   const [modalShow, setModalShow] = useState(false);
   const [validCompanies, setValidCompanies] = useState(allCompanies);
@@ -36,6 +115,20 @@ export default () => {
     Amazon: AmazonCard,
     Google: GoogleCard,
     Netflix: NetflixCard,
+    Adobe: AdobeCard,
+    Cisco: CiscoCard,
+    HP: HPCard,
+    IBM: IBMCard,
+    Intel: IntelCard,
+    Microsoft: MicrosoftCard,
+    Oracle: OracleCard,
+    Palantir: PalantirCard,
+    Paypal: PaypalCard,
+    Salesforce: SalesforceCard,
+    Spotify: SpotifyCard,
+    Twitter: TwitterCard,
+    Uber: UberCard,
+    Yahoo: YahooCard,
   };
 
   const filterObject = {
@@ -71,64 +164,67 @@ export default () => {
   });
 
   return (
-      <div className="timelineMainDiv">
-        <div className="filterDiv" >
-          <Dropdown
-            title="Protests"
-            items={allProtests}
-            multiSelect
-            state={validProtests}
-            setFunction={setValidProtests}
-          /> 
-          <Dropdown
-            title="Companies"
-            items={allCompanies}
-            multiSelect
-            state={validCompanies}
-            setFunction={setValidCompanies}
-          />
-          <Dropdown
-            title="Years"
-            items={allYears}
-            multiSelect
-            state={validYears}
-            setFunction={setValidYears}
-          />
-          <Dropdown
-            title="Countries"
-            items={allCountries}
-            multiSelect
-            state={validCountries}
-            setFunction={setValidCountries}
-          />
-        </div>
-        <div className="timelineModalDiv">
-          <VerticalTimeline>{displayCompanyCards}</VerticalTimeline>
-          <Modal
-            show={modalShow}
-            content={protestData[cardId]}
-            onHide={() => setModalShow(false)}
-          />
-        </div>
-        <div>
-      <div className="optionsButton">
-        <button className="btn btn-circle btn-md " onClick={() => setState({ isPaneOpenLeft: true })}>
-          <IoMdSwitch style={{fontSize:'27px'}}/>
-        </button>
-      </div>
-      <SlidingPane
-        isOpen={state.isPaneOpenLeft}
-        from="left"
-        width="50%"
-        onRequestClose={() => setState({ isPaneOpenLeft: false })}
-      >
+    <div className="timelineMainDiv">
+      <div className="filterDiv">
         <Dropdown
+          title="Protests"
+          items={allProtests}
+          multiSelect
+          state={validProtests}
+          setFunction={setValidProtests}
+        />
+        <Dropdown
+          title="Companies"
+          items={allCompanies}
+          multiSelect
+          state={validCompanies}
+          setFunction={setValidCompanies}
+        />
+        <Dropdown
+          title="Years"
+          items={allYears}
+          multiSelect
+          state={validYears}
+          setFunction={setValidYears}
+        />
+        <Dropdown
+          title="Countries"
+          items={allCountries}
+          multiSelect
+          state={validCountries}
+          setFunction={setValidCountries}
+        />
+      </div>
+      <div className="timelineModalDiv">
+        <VerticalTimeline>{displayCompanyCards}</VerticalTimeline>
+        <Modal
+          show={modalShow}
+          content={protestData[cardId]}
+          onHide={() => setModalShow(false)}
+        />
+      </div>
+      <div>
+        <div className="optionsButton">
+          <button
+            className="btn btn-circle btn-md "
+            onClick={() => setState({ isPaneOpenLeft: true })}
+          >
+            <IoMdSwitch style={{ fontSize: '27px' }} />
+          </button>
+        </div>
+        <SlidingPane
+          isOpen={state.isPaneOpenLeft}
+          from="left"
+          width="50%"
+          onRequestClose={() => setState({ isPaneOpenLeft: false })}
+        >
+          <Dropdown
             title="Protests"
             items={allProtests}
             multiSelect
             state={validProtests}
             setFunction={setValidProtests}
-          /> 
+          />
           <Dropdown
             title="Companies"
             items={allCompanies}
@@ -150,8 +246,8 @@ export default () => {
             state={validCountries}
             setFunction={setValidCountries}
           />
-      </SlidingPane>
-    </div>
+        </SlidingPane>
       </div>
+    </div>
   );
 };

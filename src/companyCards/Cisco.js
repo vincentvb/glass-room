@@ -1,12 +1,12 @@
 import React from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import { Icon } from '@iconify/react';
-import sharpFacebook from '@iconify/icons-ic/sharp-facebook';
+import ciscoIcon from '@iconify/icons-cib/cisco';
 
 export default ({ cardContent, id, setModalShow, setCardId }) => {
   return (
     <VerticalTimelineElement
-      ssName="vertical-timeline-element--work"
+      className="vertical-timeline-element--work"
       contentStyle={{
         background: '#f3f3f3',
         color: 'black',
@@ -15,11 +15,11 @@ export default ({ cardContent, id, setModalShow, setCardId }) => {
       contentArrowStyle={{ borderRight: '7px solid  #f3f3f3' }}
       iconStyle={{
         background: '#f3f3f3',
-        color: '#1877F2',
+        color: '#03A1D9',
         borderStyle: 'solid',
         borderColor: cardContent.protestColor,
       }}
-      icon={<Icon icon={sharpFacebook} />}
+      icon={<Icon icon={ciscoIcon} />}
       onTimelineElementClick={() => {
         setModalShow(true);
         setCardId(id);
