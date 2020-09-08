@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Header from './header';
 import Timeline from './Timeline';
 import * as serviceWorker from './serviceWorker';
 import HomePage from './HomePage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 ReactDOM.render(
+  <React.StrictMode>
+    <Header />
+  </React.StrictMode>,
   <Router>
     <Switch>
       <Route path="/" exact component={HomePage} />
