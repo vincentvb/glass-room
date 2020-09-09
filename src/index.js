@@ -8,15 +8,15 @@ import HomePage from './HomePage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <Header />
-  </React.StrictMode>,
-  <Router>
-    <Switch>
-      <Route path="/" exact component={HomePage} />
-      <Route path="/timeline" exact component={Timeline} />
-    </Switch>
-  </Router>,
+    <Router>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/timeline" exact component={Timeline} />
+      </Switch>
+    </Router>
+  </React.Fragment>,
   document.getElementById('root')
 );
 
