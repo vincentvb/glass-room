@@ -50,15 +50,14 @@ transform: translate(0px, -12px) rotate(-45deg);
 }
 
 #menu{
-  width: 150px;
-  padding: 2rem 2rem 0;
+  padding: 0 2rem 0;
   background: #fff;
   color: #333;
   font-family: arial;
   font-size: 1.3rem;
   display: block;
   position: absolute;
-  top: 0px;
+  top: 3rem;
   right: 0px;
   visibility: hidden;
 }
