@@ -1,0 +1,15 @@
+.About {
+   text-align: left;
+   line-height: 1.8;
+   padding-top: 1rem;
+}
+.Button {
+  margin-bottom: 2rem;
+}
+.titlecase {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.logo {
+  max-width:200px;
+}
