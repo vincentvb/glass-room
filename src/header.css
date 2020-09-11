@@ -1,11 +1,14 @@
+#header ~ div {
+  margin-top: 100px; /*offsets component div so sticky header doesn't overlay the content */
+}
 #header {
   background: #fff;
-  display: inline-block;
+  display: block;
   width: 100%;
   z-index: 99;
-  position: relative;
+  position: fixed; /*switch to absolute for non-sticky*/
   padding: 1rem;
-  margin-top: -25px;
+  top:0;
 }
 #logo {
   float:left;
