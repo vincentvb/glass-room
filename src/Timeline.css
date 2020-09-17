@@ -45,10 +45,12 @@
   .filterDiv {
     overflow: hidden;
     overflow-y: scroll;
-    height: 100%;
+    height: 90%;
   }
-  .timelineModalDiv:hover {
+  .timelineModalDiv {
+    position: fixed;
     overflow-y: scroll;
+    height: 90%;
   }
 }
 
