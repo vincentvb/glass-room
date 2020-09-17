@@ -1,0 +1,154 @@
+#header ~ div {
+  margin-top: 100px; /*offsets component div so sticky header doesn't overlay the content */
+}
+#header {
+  background: #fff;
+  display: block;
+  width: 100%;
+  z-index: 99;
+  position: fixed; /*switch to absolute for non-sticky*/
+  padding: 1rem;
+  top:0;
+}
+#logo {
+  float:left;
+  align-items: center;
+  display: flex;
+}
+#nav {
+  float:right;
+}
+.brand{
+  text-transform: uppercase;
+  padding-left: 8px;
+  font-size: 1.3rem;
+}
+#menu-button{
+  width: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: all linear .3s;
+  padding: 4px;
+  z-index: 1;
+}
+#menu-button.active{
+}
+#line-1,#line-2,#line-3{
+  width: 70%;
+  background: #4453f7;
+  height: 4px;
+  margin: 6px auto;
+  border-radius: 2px;
+  transition: all linear .3s;
+}
+
+#line-1.active{
+-webkit-transform: translate(0px,8px) rotate(45deg);
+transform: translate(0px,8px) rotate(45deg);
+}
+
+#line-2.active{
+opacity: 0;
+}
+
+#line-3.active{
+-webkit-transform: translate(0px, -12px) rotate(-45deg);
+transform: translate(0px, -12px) rotate(-45deg);
+}
+
+#menu{
+  padding: 0 2rem 0;
+  background: #fff;
+  color: #333;
+  font-family: arial;
+  font-size: 1.3rem;
+  display: block;
+  position: absolute;
+  top: 3.5rem;
+  right: 0px;
+  visibility: hidden;
+}
+
+#menu.active {
+  animation-name: slideDown;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  -webkit-animation-name: slideDown;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+  visibility: visible !important;
+}
+
+@keyframes slideDown {
+  0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+#menu ul{
+  list-style: none;
+  padding: 1rem;
+}
+#menu a:link, #menu a:visited{
+  text-decoration: none;
+  color: #333;
+}
+#menu a:hover, #menu a:active{
+  text-decoration: none;
+  color: #000;
+}
+
+#menu ul li{
+  margin: 18px 0;
+}
+.border-corners {
+    position: relative;
+}
+.border-corners:before {
+    top: 0;
+    left: 0;
+    border-width: 2px 0 0 2px;
+}
+.border-corners:after {
+    bottom: 0;
+    right: 0;
+    border-width: 0 2px 2px 0;
+}
+.border-corners:after, .border-corners:before {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    content: " ";
+    border-style: solid;
+    border-color: #4453f7;
+}
+#content {
+  height: 800px;
+  background: #f1f1f1;
+  display: block;
+  margin: 2rem;
+}

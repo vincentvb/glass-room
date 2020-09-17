@@ -1,18 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import About from './About';
+import Header from './header';
 import Timeline from './Timeline';
 import * as serviceWorker from './serviceWorker';
 import HomePage from './HomePage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 ReactDOM.render(
-  <Router>
-    <Switch>
-      <Route path="/" exact component={HomePage} />
-      <Route path="/timeline" exact component={Timeline} />
-    </Switch>
-  </Router>,
+  <React.Fragment>
+    <Header />
+    <Router>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/timeline" exact component={Timeline} />
+        <Route path="/about" exact component={About} />
+      </Switch>
+    </Router>
+  </React.Fragment>,
   document.getElementById('root')
 );
 
