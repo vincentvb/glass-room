@@ -1,47 +1,55 @@
-.timelineMainDiv{
-    display: flex;
+.timelineMainDiv {
+  display: flex;
 }
 
-.filterDiv{
-    width: 20%;
-    position: fixed;
+.filterDiv {
+  width: 20%;
+  position: fixed;
 }
 
-.timelineModalDiv{
-    width: 80%;
-    margin-left: 20%;
+.timelineModalDiv {
+  width: 80%;
+  margin-left: 20%;
 }
 
-.vertical-timeline-element-content{
-    cursor: pointer;
+.vertical-timeline-element-content {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1170px) {
-    .filterDiv {
-        display: none;
-    }
-    .timelineModalDiv{
-        margin-left: auto;
-        width: 100%;
-    }
-    .optionsButton{
-        display: flex;
-        position: fixed;
-        right:    0;
-        bottom:   2%;
-        margin-right: 3%;
-    }
+  .filterDiv {
+    display: none;
+  }
+  .timelineModalDiv {
+    margin-left: auto;
+    width: 100%;
+  }
+  .optionsButton {
+    display: flex;
+    position: fixed;
+    right: 0;
+    bottom: 2%;
+    margin-right: 3%;
+  }
 }
 
-.slide-pane__content{
-    padding: 24px 0px;
+.slide-pane__content {
+  padding: 24px 0px;
 }
 
 @media only screen and (min-width: 1170px) {
-    .optionsButton{
-        margin-top: 32px;
-        display: none;
-    }    
+  .optionsButton {
+    margin-top: 32px;
+    display: none;
+  }
+  .filterDiv {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100%;
+  }
+  .timelineModalDiv:hover {
+    overflow-y: scroll;
+  }
 }
 
 /* .btn-circle.btn-md { 
@@ -55,14 +63,14 @@
     box-shadow: 2px 2px #212529;
 }  */
 
-.btn-circle.btn-md { 
-    width: 50px; 
-    height: 50px; 
-    padding: 7px 10px; 
-    border-radius: 10px; 
-    font-size: 10px; 
-    text-align: center; 
-    box-shadow: 2px 2px #212529;
-    background: ghostwhite;
-    border: 2px solid #212529;
-} 
+.btn-circle.btn-md {
+  width: 50px;
+  height: 50px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-size: 10px;
+  text-align: center;
+  box-shadow: 2px 2px #212529;
+  background: ghostwhite;
+  border: 2px solid #212529;
+}
