@@ -1479,7 +1479,7 @@ export default [
     ],
   },
   {
-    id: 78,
+    id: 79,
     companyName: 'Google',
     protestColor: '#EE343D',
     event:
@@ -1496,7 +1496,7 @@ export default [
     source: [''],
   },
   {
-    id: 79,
+    id: 80,
     companyName: 'Paypal',
     protestColor: '#263692',
     event:
@@ -1513,7 +1513,7 @@ export default [
     source: ['https://www.change.org/p/rupert-keeley-enable-paypal-in-ghana'],
   },
   {
-    id: 80,
+    id: 81,
     companyName: 'Adobe',
     protestColor: '#263692',
     event:
@@ -1533,7 +1533,7 @@ export default [
     ],
   },
   {
-    id: 81,
+    id: 82,
     companyName: 'Paypal',
     protestColor: '#263692',
     event:
@@ -1552,7 +1552,7 @@ export default [
     ],
   },
   {
-    id: 82,
+    id: 83,
     companyName: 'Apple',
     protestColor: '#231F20',
     event:
@@ -1569,7 +1569,7 @@ export default [
     source: ['https://www.huffpost.com/entry/apple-store-protests_n_1265406'],
   },
   {
-    id: 83,
+    id: 84,
     companyName: 'Apple',
     protestColor: '#231F20',
     event:
@@ -1588,7 +1588,7 @@ export default [
     ],
   },
   {
-    id: 84,
+    id: 85,
     companyName: 'Apple',
     protestColor: '#231F20',
     event:
@@ -1607,7 +1607,7 @@ export default [
     ],
   },
   {
-    id: 85,
+    id: 86,
     companyName: 'Paypal',
     protestColor: '#263692',
     event: "The 'Anonymous' collective promotes legal boycott of PayPal.",
@@ -1626,7 +1626,7 @@ export default [
     ],
   },
   {
-    id: 86,
+    id: 87,
     companyName: 'Apple',
     protestColor: '#263692',
     event:
@@ -1645,7 +1645,7 @@ export default [
     ],
   },
   {
-    id: 87,
+    id: 88,
     companyName: 'Apple',
     protestColor: '#231F20',
     event:
@@ -1664,7 +1664,7 @@ export default [
     ],
   },
   {
-    id: 88,
+    id: 89,
     companyName: 'Intel',
     protestColor: '#263692',
     event:
@@ -1683,7 +1683,7 @@ export default [
     ],
   },
   {
-    id: 89,
+    id: 90,
     companyName: 'Intel',
     protestColor: '#EE343D',
     event:
@@ -1702,7 +1702,7 @@ export default [
     ],
   },
   {
-    id: 90,
+    id: 91,
     companyName: 'HP',
     protestColor: '#EE343D',
     event:
@@ -1721,7 +1721,7 @@ export default [
     ],
   },
   {
-    id: 91,
+    id: 92,
     companyName: 'Cisco',
     protestColor: '#EE343D',
     event:
@@ -1740,7 +1740,7 @@ export default [
     ],
   },
   {
-    id: 92,
+    id: 93,
     companyName: 'Cisco',
     protestColor: '#EE343D',
     event:
@@ -1759,7 +1759,7 @@ export default [
     ],
   },
   {
-    id: 93,
+    id: 94,
     companyName: 'Cisco',
     protestColor: '#EE343D',
     event:
@@ -1778,7 +1778,7 @@ export default [
     ],
   },
   {
-    id: 94,
+    id: 95,
     companyName: 'Cisco',
     protestColor: '#EE343D',
     event:
@@ -1797,7 +1797,7 @@ export default [
     ],
   },
   {
-    id: 95,
+    id: 96,
     companyName: 'Facebook',
     protestColor: '#263692',
     event:
@@ -1816,7 +1816,7 @@ export default [
     ],
   },
   {
-    id: 96,
+    id: 97,
     companyName: 'HP',
     protestColor: '#EE343D',
     event:
