@@ -1,45 +1,30 @@
 import React from 'react';
-import techEquityLogo from './techequity-logo.svg';
-import { Button, Container, Row, Image, Col } from 'react-bootstrap';
+import { Button, Container, Row, Col } from 'react-bootstrap';
 import './HomePage.css';
 import { Link } from 'react-router-dom';
-import tacticalTechLogo from './tactical-tech.jpg';
-import cards from './cards.jpg';
 
 export default () => {
   return (
     <div className="Homeblock">
-      <Container>
-        <Row className="justify-content-md-center">
-          <Col xs lg="4">
-            <h2 className="title">Protests, Dissents, and Actions in Tech</h2>
-          </Col>
-        </Row>
-        <Row className="justify-content-md-center">
-          <Col xs>
-            <div className="Description">
-              <p>In Collaboration with Tactical Tech and TechEquity Collaborative</p>
+      <Container fluid className="LandingImage">
+        <Row className="justify-content-md-left p-2">
+          <Col xs lg="6">
+            <h2 className="Home-Title white p-3">Protests, Dissents, and Actions in Tech</h2>
+            <div className="Description white p-3 mt-3">
+              As tech companies have grown and expanded their global reach, there has been increasingly visible backlash and
+              resistance against their practices from both inside and outside the industry.
+              This timeline highlights more than 100 protests over the last ten years selected from publicly available information.
+              It offers a view into the consequences of tech companies’ decisions, policies, and
+              practices and their impact on their workforce, users, contractors, vendors, clients, and customers.
             </div>
-          </Col>
-        </Row>
-        <Row className="mb-3">
-          <Col xs={{ span: 3, offset: 3 }}>
-            <Image src={tacticalTechLogo} alt="tactical tech logo" fluid />
-          </Col>
-          <Col xs={{ span: 3 }}>
-            <Image src={techEquityLogo} alt="tech equity logo" fluid />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Image className="CardImage" src={cards} fluid />
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <Link to="/timeline">
-              <Button className="Button" variant="light" fluid>GO TO TIMELINE</Button>
-            </Link>
+            <div className="ButtonContainer mt-3">
+              <Link to="/timeline">
+                <Button className="pl-4 pt-2 pb-2 pr-4" variant="light" fluid>
+                  <span className="Timeline-text">GO TO TIMELINE</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="88" height="32" viewBox="0 0 88 32"><g fill="none" fill-rule="evenodd" stroke="#4453f7" stroke-width="3"><path d="M8 16h72M72 8l8 8-8 8"></path></g></svg>
+                </Button>
+              </Link>
+            </div>
           </Col>
         </Row>
       </Container>

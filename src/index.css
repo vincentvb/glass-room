@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background-color: white;
-  font-family: 'Jost', sans-serif;
+  font-family: 'Jost' !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

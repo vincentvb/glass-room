@@ -11,8 +11,8 @@ function Header(props) {
   return (
     <div id="header">
       <header>
-        <div id="logo">
-          <img src={logo} alt="line drawing Logo art" />
+        <div id="logo" href="./">
+          <a href="./"><img src={logo} href="./" alt="line drawing Logo art" /></a>
           <span class="brand">The Glass Room</span>
         </div>
         <div id="nav">

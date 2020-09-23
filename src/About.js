@@ -9,10 +9,10 @@ import techEquityLogo from './techequity-logo.svg';
 export default () => {
   return (
     <div className="Homeblock">
-      <Container>
+      <Container className="p-4">
         <Row className="justify-content-md-center">
           <Col xs lg="8">
-            <h2 className="title">About the Project</h2>
+            <h2> About the Project</h2>
           </Col>
         </Row>
         <Row className="justify-content-md-center">
@@ -21,14 +21,14 @@ export default () => {
               <p>As tech companies have grown and expanded their global reach, there has been increasingly visible backlash and resistance against their practices from both inside and outside the industry.</p>
               <p>This timeline is the digitized version of one of Tactical Tech’s The Glass Room exhibits. It highlights more than 100 protests over the last ten years selected from publicly available information. It offers a view into the consequences of tech companies’ decisions, policies, and practices and their impact on their workforce, users, contractors, vendors, clients, and customers.</p>
               <p>The timeline also reveals the recent trend toward collective worker resistance within Big Tech. Some of these protests have yielded attention and results, while others have flown under the radar or been overlooked by the media. With governments slow to regulate, and companies reluctant or failing at self-regulation, could these protests point toward a form of accountability?</p>
-              <p>This digital timeline is brought to you by Tactical Tech and TechEquity Collaborative and sponsored Firefox. It was designed and built by volunteers from TechEquity Collaborative who generously donated their time and skills to digitize the protest timeline: Jesse Luo, Vikas Shukla, and Vincent Van Buskirk.</p>
+              <p>This digital timeline is brought to you by Tactical Tech and TechEquity Collaborative and sponsored Firefox. It was designed and built by volunteers from TechEquity Collaborative who generously donated their time and skills to digitize the protest timeline: Jesse Luo, Vikas Shukla, Kat Hanner, and Vincent Van Buskirk,.</p>
             </div>
           </Col>
         </Row>
         <Row>
           <Col>
             <Link to="/timeline">
-              <Button className="Button" variant="light" fluid>GO TO TIMELINE</Button>
+              <Button className="Button" variant="outline-secondary" fluid>GO TO TIMELINE</Button>
             </Link>
           </Col>
         </Row>

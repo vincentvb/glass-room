@@ -1,32 +1,46 @@
-.title {
-  font-weight: bold;
-  text-align: center;
+.Home-Title {
+  font-size: 4vh;
+  text-align: left;
 }
 
 .Homeblock {
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2%;
-  display: block;
-  text-align: center
-}
-
-.Button {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: block;
+  text-align: center;
 }
 
 .Description {
-   margin: auto;
-   width: 75%
+  text-align: justify;
+  line-height: 1.5em;
 }
 
 .CardImage {
   margin: auto;
   display: block;
-  height: 90%;
-  width: 60%
+  height: 100%;
+  width: 100%
+}
+
+.LandingImage {
+  background: url('cards.jpg');
+  height: calc(100vh - 80px);
+  width: 100%;
+  background-size: cover;
+  padding-top: 2em;
+}
+
+.white {
+  background: white;
+}
+
+.ButtonContainer {
+  text-align: left;
+  width: 100%;
+}
+
+.Timeline-text {
+  font-size: 3vh;
 }
 

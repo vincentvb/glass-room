@@ -1,5 +1,5 @@
 #header ~ div {
-  margin-top: 100px; /*offsets component div so sticky header doesn't overlay the content */
+  margin-top: 80px; /*offsets component div so sticky header doesn't overlay the content */
 }
 #header {
   background: #fff;
