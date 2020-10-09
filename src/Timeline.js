@@ -69,7 +69,6 @@ export default () => {
     'Belgium',
     'China',
     'France',
-    'France',
     'Germany',
     'Ghana',
     'India',
@@ -93,7 +92,6 @@ export default () => {
     'Job Security',
     'Labor/Wage',
     'Public Resignation',
-    'Sexual Harassment',
     'Sexual Harassment',
     'Tax Evasion',
     'Tech Presence',
@@ -137,8 +135,8 @@ export default () => {
     countries: validCountries,
     protests: validProtests,
   };
-  const filterFunction = function(filterObject) {
-    return function(card) {
+  const filterFunction = function (filterObject) {
+    return function (card) {
       return (
         filterObject.companies.includes(card.companyName) &&
         filterObject.years.includes(card.year) &&
