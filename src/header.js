@@ -13,7 +13,7 @@ function Header(props) {
       <header>
         <div id="logo" href="./">
           <a href="./"><img src={logo} href="./" alt="line drawing Logo art" /></a>
-          <span class="brand">The Glass Room</span>
+          <span className="brand">The Glass Room</span>
         </div>
         <div id="nav">
           <div id="menu-button" className={isActive ? 'active' : null}
