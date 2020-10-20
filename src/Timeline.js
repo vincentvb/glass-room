@@ -31,6 +31,7 @@ import './Timeline.css';
 
 export default () => {
   const allCompanies = [
+    "All",
     'Adobe',
     'Amazon',
     'Apple',
@@ -51,6 +52,7 @@ export default () => {
     'Uber',
   ];
   const allYears = [
+    "All",
     '2009',
     '2010',
     '2011',
@@ -65,6 +67,7 @@ export default () => {
     'Ongoing',
   ];
   const allCountries = [
+    "All",
     'Afghanistan',
     'Belgium',
     'China',
@@ -81,6 +84,7 @@ export default () => {
     'Worldwide',
   ];
   const allProtests = [
+    "All",
     'Class Action Lawsuit',
     'Company Policy',
     'Consumer Outrage',

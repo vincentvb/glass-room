@@ -10,6 +10,11 @@ function Dropdown({ title, items, multiSelect = false, state, setFunction }) {
 
   async function handleOnClick(e, item) {
     if (!selection.some((current) => current === item)) {
+      if(item === "All"){
+        await setFunction(items);
+        setSelection(items);
+        return;
+      }
       if (!multiSelect) {
         setSelection([item]);
       } else if (multiSelect) {
@@ -17,6 +22,11 @@ function Dropdown({ title, items, multiSelect = false, state, setFunction }) {
         setSelection([...selection, item]);
       }
     } else {
+      if(item === "All"){
+        await setFunction([]);
+        setSelection([]);
+        return;
+      }
       let selectionAfterRemoval = selection;
       selectionAfterRemoval = selectionAfterRemoval.filter(
         (current) => current !== item
