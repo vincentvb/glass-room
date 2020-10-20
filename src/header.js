@@ -27,7 +27,7 @@ function Header(props) {
           </div>
           <div id="menu" className={isActive ? 'active' : null}
             onClick={toggleClass}>
-            <div class="border-corners">
+            <div className="border-corners">
               <ul>
                 <li><a href="./">Home</a></li>
                 <li><a href="./timeline">Timeline</a></li>

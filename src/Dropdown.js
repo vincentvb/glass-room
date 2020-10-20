@@ -7,6 +7,7 @@ function Dropdown({ title, items, multiSelect = false, state, setFunction }) {
   const [selection, setSelection] = useState(state);
   const toggle = () => setOpen(!open);
   Dropdown.handleClickOutside = () => setOpen(false);
+  const itemLength = items.length;
 
   async function handleOnClick(e, item) {
     if (!selection.some((current) => current === item)) {
@@ -31,6 +32,14 @@ function Dropdown({ title, items, multiSelect = false, state, setFunction }) {
       selectionAfterRemoval = selectionAfterRemoval.filter(
         (current) => current !== item
       );
+      console.log(selectionAfterRemoval, itemLength);
+      if(selectionAfterRemoval.length !== itemLength){
+        const allIndex = selectionAfterRemoval.indexOf("All");
+        if(allIndex > -1){
+          selectionAfterRemoval.splice(allIndex,1);
+        }
+      }
+      console.log("after", selectionAfterRemoval)
       await setFunction(state.filter((company) => company !== item));
       setSelection([...selectionAfterRemoval]);
     }
