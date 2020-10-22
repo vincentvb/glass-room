@@ -334,7 +334,7 @@ export default () => {
                           </div>
                         );
                       });
-                      
+
                       const displayCompanyCards_2009 = filteredCompanyCards.map((card, index) => {
                           const CardType = components[card.companyName];
                           return (

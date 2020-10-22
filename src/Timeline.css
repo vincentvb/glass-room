@@ -77,6 +77,29 @@
   border: 2px solid #212529;
 }
 .vertical-timeline h2 {
+  margin: 2rem 0;
   text-align: center;
   position: relative;
+  color: #505050;
+  padding: 1rem 1.5rem;
+  background: #fff;
+  width: fit-content;
+  -webkit-box-shadow: 0 0 0 4px #fff, 0 3px 0 4px rgba(0,0,0,.05);
+  box-shadow: 0 0 0 4px #fff, 0 3px 0 4px rgba(0,0,0,.05);
+}
+
+@media only screen and (min-width: 1170px){
+  .vertical-timeline h2 {
+    margin: 2rem auto;
+  }
+.vertical-timeline--two-columns .yearDiv:nth-child(2n) .vertical-timeline-element-content {
+    float: right;
+}
+.vertical-timeline--two-columns .yearDiv:nth-child(2n) .vertical-timeline-element-content .vertical-timeline-element-content-arrow {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+}
 }
