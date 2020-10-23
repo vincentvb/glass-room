@@ -169,7 +169,7 @@ export default () => {
       const CardType = components[card.companyName];
       return (
         <div class="yearDiv">
-        {card.year === 2019 &&
+        {card.year == 2019 &&
           <CardType
             cardContent={card}
             key={index}
@@ -186,7 +186,7 @@ export default () => {
         const CardType = components[card.companyName];
         return (
           <div class="yearDiv">
-          {card.year === 2018 &&
+          {card.year == 2018 &&
             <CardType
               cardContent={card}
               key={index}
@@ -203,7 +203,7 @@ export default () => {
           const CardType = components[card.companyName];
           return (
             <div class="yearDiv">
-            {card.year === 2017 &&
+            {card.year == 2017 &&
               <CardType
                 cardContent={card}
                 key={index}
@@ -220,7 +220,7 @@ export default () => {
             const CardType = components[card.companyName];
             return (
               <div class="yearDiv">
-              {card.year === 2016 &&
+              {card.year == 2016 &&
                 <CardType
                   cardContent={card}
                   key={index}
@@ -237,7 +237,7 @@ export default () => {
               const CardType = components[card.companyName];
               return (
                 <div class="yearDiv">
-                {card.year === 2015 &&
+                {card.year == 2015 &&
                   <CardType
                     cardContent={card}
                     key={index}
@@ -254,7 +254,7 @@ export default () => {
                 const CardType = components[card.companyName];
                 return (
                   <div class="yearDiv">
-                  {card.year === 2014 &&
+                  {card.year == 2014 &&
                     <CardType
                       cardContent={card}
                       key={index}
@@ -271,7 +271,7 @@ export default () => {
                   const CardType = components[card.companyName];
                   return (
                     <div class="yearDiv">
-                    {card.year === 2013 &&
+                    {card.year == 2013 &&
                       <CardType
                         cardContent={card}
                         key={index}
@@ -288,7 +288,7 @@ export default () => {
                     const CardType = components[card.companyName];
                     return (
                       <div class="yearDiv">
-                      {card.year === 2012 &&
+                      {card.year == 2012 &&
                         <CardType
                           cardContent={card}
                           key={index}
@@ -305,7 +305,7 @@ export default () => {
                       const CardType = components[card.companyName];
                       return (
                         <div class="yearDiv">
-                        {card.year === 2011 &&
+                        {card.year == 2011 &&
                           <CardType
                             cardContent={card}
                             key={index}
@@ -322,7 +322,7 @@ export default () => {
                         const CardType = components[card.companyName];
                         return (
                           <div class="yearDiv">
-                          {card.year === 2010 &&
+                          {card.year == 2010 &&
                             <CardType
                               cardContent={card}
                               key={index}
@@ -339,7 +339,7 @@ export default () => {
                           const CardType = components[card.companyName];
                           return (
                             <div class="yearDiv">
-                            {card.year === 2009 &&
+                            {card.year == 2009 &&
                               <CardType
                                 cardContent={card}
                                 key={index}
