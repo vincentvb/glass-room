@@ -151,7 +151,7 @@ export default () => {
   const displayCompanyCards_ongoing = filteredCompanyCards.map((card, index) => {
     const CardType = components[card.companyName];
     return (
-      <div class="yearDiv">
+      <div className="yearDiv">
       {card.year === 'Ongoing' &&
         <CardType
           cardContent={card}
@@ -168,7 +168,7 @@ export default () => {
   const displayCompanyCards_2019 = filteredCompanyCards.map((card, index) => {
       const CardType = components[card.companyName];
       return (
-        <div class="yearDiv">
+        <div className="yearDiv">
         {card.year == 2019 &&
           <CardType
             cardContent={card}
@@ -185,7 +185,7 @@ export default () => {
     const displayCompanyCards_2018 = filteredCompanyCards.map((card, index) => {
         const CardType = components[card.companyName];
         return (
-          <div class="yearDiv">
+          <div className="yearDiv">
           {card.year == 2018 &&
             <CardType
               cardContent={card}
@@ -202,7 +202,7 @@ export default () => {
       const displayCompanyCards_2017 = filteredCompanyCards.map((card, index) => {
           const CardType = components[card.companyName];
           return (
-            <div class="yearDiv">
+            <div className="yearDiv">
             {card.year == 2017 &&
               <CardType
                 cardContent={card}
@@ -219,7 +219,7 @@ export default () => {
         const displayCompanyCards_2016 = filteredCompanyCards.map((card, index) => {
             const CardType = components[card.companyName];
             return (
-              <div class="yearDiv">
+              <div className="yearDiv">
               {card.year == 2016 &&
                 <CardType
                   cardContent={card}
@@ -236,7 +236,7 @@ export default () => {
           const displayCompanyCards_2015 = filteredCompanyCards.map((card, index) => {
               const CardType = components[card.companyName];
               return (
-                <div class="yearDiv">
+                <div className="yearDiv">
                 {card.year == 2015 &&
                   <CardType
                     cardContent={card}
@@ -253,7 +253,7 @@ export default () => {
             const displayCompanyCards_2014 = filteredCompanyCards.map((card, index) => {
                 const CardType = components[card.companyName];
                 return (
-                  <div class="yearDiv">
+                  <div className="yearDiv">
                   {card.year == 2014 &&
                     <CardType
                       cardContent={card}
@@ -270,7 +270,7 @@ export default () => {
               const displayCompanyCards_2013 = filteredCompanyCards.map((card, index) => {
                   const CardType = components[card.companyName];
                   return (
-                    <div class="yearDiv">
+                    <div className="yearDiv">
                     {card.year == 2013 &&
                       <CardType
                         cardContent={card}
@@ -287,7 +287,7 @@ export default () => {
                 const displayCompanyCards_2012 = filteredCompanyCards.map((card, index) => {
                     const CardType = components[card.companyName];
                     return (
-                      <div class="yearDiv">
+                      <div className="yearDiv">
                       {card.year == 2012 &&
                         <CardType
                           cardContent={card}
@@ -304,7 +304,7 @@ export default () => {
                   const displayCompanyCards_2011 = filteredCompanyCards.map((card, index) => {
                       const CardType = components[card.companyName];
                       return (
-                        <div class="yearDiv">
+                        <div className="yearDiv">
                         {card.year == 2011 &&
                           <CardType
                             cardContent={card}
@@ -321,7 +321,7 @@ export default () => {
                     const displayCompanyCards_2010 = filteredCompanyCards.map((card, index) => {
                         const CardType = components[card.companyName];
                         return (
-                          <div class="yearDiv">
+                          <div className="yearDiv">
                           {card.year == 2010 &&
                             <CardType
                               cardContent={card}
@@ -338,7 +338,7 @@ export default () => {
                       const displayCompanyCards_2009 = filteredCompanyCards.map((card, index) => {
                           const CardType = components[card.companyName];
                           return (
-                            <div class="yearDiv">
+                            <div className="yearDiv">
                             {card.year == 2009 &&
                               <CardType
                                 cardContent={card}
